@@ -1,7 +1,7 @@
 ---
 title: "My First Markdown Blog"
 slug: "/my-first-markdown-blog"
-date: "2023 2 27"
+date: "2023 Feb 27"
 ---
 
 # This is a markdown post!

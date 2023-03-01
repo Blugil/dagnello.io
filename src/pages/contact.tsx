@@ -2,11 +2,12 @@ import * as React from "react"
 import type { HeadFC, PageProps } from "gatsby"
 import Layout from "../components/layout"
 import '../components/layout/layout.css'
+import ContactForm from "../components/contact/contact"
 
-const Contact: React.FC<PageProps> = () => {
+const Contact: React.FC<void> = () => {
   return (
     <main>
-      <Layout />
+      <Layout component={<ContactForm />} />
     </main>
   )
 }

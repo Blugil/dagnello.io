@@ -18,14 +18,14 @@ const Home: React.FC<any> = ({data}) => {
 				<small><Link to="/resume"><span>website link</span></Link> | <a href={resume} download><span>pdf download</span></a></small>
 				<p>
 					I've got quite a bit of experience in a few different fields such as: Backend Golang development 
-          for LaunchDarkly working on our Terraform integration, ReactJS front end development for a major design firm,
-					teaching experience with programming (C/C++/Scheme/Bash/Prolog), and customer focused service work. 
+          for LaunchDarkly working on our Terraform integration, ReactJS front end development for Fisher PHX, a major design firm based in Arizona, and 
+					teaching experience with programming (C/C++/Scheme/Bash/Prolog). 
           If you think my skills and I would be a good fit feel free to...
 				</p>
 			</div>
 
 			<div className="section">
-				<h1>Contact Me</h1>
+				<h1>Contact Me!</h1>
 				<p>
 					I'm always looking to make new connections and explore new opportunities to both demonstrate and expand my skills. 
 					If you think I'd be a good fit for a team or project after taking a look at my resume and/or a few of my posts, 
