@@ -1,0 +1,21 @@
+#home-container {
+	max-width: 700px;
+	min-width: 350px;
+	color: var(--highlight);
+}
+
+#home-container .section {
+	margin-bottom: 4em;
+}
+#home-container li:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 800px) {
+  #home-container {
+    min-width: 100%;
+    width: 100%;
+  }
+}
+
+
