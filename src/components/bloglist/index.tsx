@@ -1,25 +1,9 @@
 import { Link } from "gatsby";
 import * as React from "react"
 
-
-const generateDatedList = () => {
-  return(
-    <div>
-      <h1>date</h1>
-      <ul>
-        something
-      </ul>
-    </div>
-  )
-}
-
-
 const createArticleLinkListElement = (frontmatter: any) => {
   const {title, slug, date} = frontmatter;
   const linkDestination = "/blog" + slug;
-
-  let year = date.split(' ')[0];
-  console.log(year);
   return (
     <li key={title}>
       <Link to={linkDestination}> {date} &mdash; <span>{title}</span> </Link>
@@ -33,25 +17,52 @@ const BlogPostList: React.FC<any> = ({ data, max }) => {
   const nodes = allMarkdownRemark.nodes;
   
   let articleList: any[] = [];
-
+  
   if (max) {
     const amount = max > nodes.length ? nodes.length : max;
     for (let i = 0; i < amount; i++) {
       articleList.push(createArticleLinkListElement(nodes[i].frontmatter))
     }
+    return (
+      <div>
+        <ul>
+          {articleList.reverse()}
+        </ul>
+      </div>
+    )
   }
 
-  else {
-    nodes.forEach((post: any) => {
-      articleList.push(createArticleLinkListElement(post.frontmatter))
-    })
+  // no max == full blog page
+  let years: { [key: string] : any[]; } = {};
+
+  // generates the dictionary of blog posts keyed under a year
+  nodes.forEach((post: any) => {
+    const {date} = post.frontmatter;
+    const year = date.split(' ')[0];
+
+    if (!years.hasOwnProperty(year)) {
+      years[year] = [createArticleLinkListElement(post.frontmatter)];
+    }
+    else {
+      years[year].push(createArticleLinkListElement(post.frontmatter));
+    }
+  })
+
+  // creates a separate section for each year 
+  for (const [key, value] of Object.entries(years)) {
+    articleList.push(
+      <div>
+        <h1>{key}</h1>
+        <ul>
+          {value.reverse()} 
+        </ul>
+      </div>
+    )
   }
 
   return (
     <div>
-      <ul>
-        {articleList}
-      </ul>
+      {articleList.reverse()}
     </div>
   )
 }
