@@ -1,16 +1,16 @@
 import { Link } from "gatsby";
 import * as React from "react"
+import ArticlePreview from "./components/articleLink";
 
 const createArticleLinkListElement = (frontmatter: any) => {
   const {title, slug, date} = frontmatter;
   const linkDestination = "/blog" + slug;
   return (
-    <li key={title}>
+    <li key={slug}>
       <Link to={linkDestination}> {date} &mdash; <span>{title}</span> </Link>
     </li>
   )
 }
-
 
 const BlogPostList: React.FC<any> = ({ data, max }) => {
   const { allMarkdownRemark } = data 
@@ -42,16 +42,18 @@ const BlogPostList: React.FC<any> = ({ data, max }) => {
 
     if (!years.hasOwnProperty(year)) {
       years[year] = [createArticleLinkListElement(post.frontmatter)];
+      //years[year] = [<ArticlePreview frontmatter={post.frontmatter} />];
     }
     else {
       years[year].push(createArticleLinkListElement(post.frontmatter));
+      //years[year].push(<ArticlePreview frontmatter={post.frontmatter} />);
     }
   })
 
   // creates a separate section for each year 
   for (const [key, value] of Object.entries(years)) {
     articleList.push(
-      <div>
+      <div key={key}>
         <h1>{key}</h1>
         <ul>
           {value.reverse()} 

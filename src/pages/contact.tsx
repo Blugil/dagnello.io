@@ -1,5 +1,5 @@
 import * as React from "react"
-import type { HeadFC, PageProps } from "gatsby"
+import type { HeadFC } from "gatsby"
 import Layout from "../components/layout"
 import '../components/layout/layout.css'
 import ContactForm from "../components/contact/contact"

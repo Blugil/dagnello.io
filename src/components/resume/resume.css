@@ -1,0 +1,25 @@
+.resume-container {
+	max-width: 1000px;
+	color: var(--highlight);
+}
+
+.subh {
+	font-size: 18px;
+  color: #EA0848;
+}
+
+.line {
+	width: 100%;
+	height: 2px;
+	background-color: var(--highlight);
+}
+
+.resume-container ul {
+  padding-left: 50px;
+  list-style: disc;
+}
+
+.resume-container li {
+  padding-bottom: 10px;
+}
+

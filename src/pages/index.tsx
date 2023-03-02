@@ -1,6 +1,6 @@
 import * as React from "react"
 import { graphql } from "gatsby"
-import type { HeadFC, PageProps } from "gatsby"
+import type { HeadFC } from "gatsby"
 import Layout from "../components/layout"
 import '../components/layout/layout.css'
 import Home from "../components/home/home"
