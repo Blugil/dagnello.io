@@ -5,6 +5,7 @@ import './resume.css';
 const ResumeBuild: React.FC<any> = () => {
   
   return(
+      <div>
         <div className="resume-container">
             <h1>
                 Dominick Agnello
@@ -102,8 +103,9 @@ const ResumeBuild: React.FC<any> = () => {
                     Pursuing a bachelor's degree in Computer Science. 
                 </li>
             </ul>
-        <div className="spacer"></div>
         </div>
+        <div className="spacer"></div>
+      </div>
   )
 }
 

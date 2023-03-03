@@ -1,0 +1,8 @@
+#main-bloglist {
+	max-width: 1000px;
+  min-width: 900px;
+  border-radius: 10px;
+	color: var(--highlight);
+  background-color: #282828;
+  padding: 30px 20px 30px 20px;
+}

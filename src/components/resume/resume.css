@@ -1,6 +1,9 @@
 .resume-container {
 	max-width: 1000px;
+  border-radius: 10px;
 	color: var(--highlight);
+  background-color: #282828;
+  padding: 30px 20px 30px 20px;
 }
 
 .subh {

@@ -1,10 +1,17 @@
 #contact-container {
   margin: 0 auto;
-  width: 25em;
+  width: 700px;
 	box-sizing: border-box;
 	color: var(--highlight);
 	display: flex;
 	flex-direction: column;
+
+
+	max-width: 1000px;
+  border-radius: 10px;
+	color: var(--highlight);
+  background-color: #282828;
+  padding: 30px 20px 30px 20px;
 	
 }
 

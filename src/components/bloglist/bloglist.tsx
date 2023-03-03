@@ -2,6 +2,8 @@ import { Link } from "gatsby";
 import * as React from "react"
 import ArticlePreview from "./components/articleLink";
 
+import './bloglist.css';
+
 const createArticleLinkListElement = (frontmatter: any) => {
   const {title, slug, date} = frontmatter;
   const linkDestination = "/blog" + slug;
@@ -63,7 +65,7 @@ const BlogPostList: React.FC<any> = ({ data, max }) => {
   }
 
   return (
-    <div>
+    <div id="main-bloglist">
       {articleList.reverse()}
     </div>
   )
