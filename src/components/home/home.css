@@ -1,7 +1,10 @@
 #home-container {
-	max-width: 700px;
+	max-width: 900px;
 	min-width: 350px;
+  border-radius: 10px;
 	color: var(--highlight);
+  background-color: #282828;
+  padding: 30px 20px 30px 20px;
 }
 
 #home-container .section {

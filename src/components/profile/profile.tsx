@@ -12,10 +12,7 @@ const Profile: React.FC<any> = () => {
 		<div className="container profilecard">
       <img className="profileimage" alt="profile" src={blugil} />
       <h1>
-        <a href="/#" style={{color: "#5BC0BE"}}>D</a>
-        <a href="/#" style={{color: "#EA0848"}}>o</a>
-        <a href="/#" style={{color: "#F8B148"}}>m</a>
-        inick Agnello
+        Dominick Agnello
       </h1>
       <p>I'm a Computer Science student at Arizona State 
           University. Interested in web development, 

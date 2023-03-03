@@ -17,20 +17,20 @@
 	flex-direction: row;
 	align-items: center;
 	justify-content: stretch;
-	padding-bottom: 10px;
+	padding-bottom: 20px;
 	width: fit-content;
  }
 
 
  .active .bar {
-	 background-color: #EA0848;
+	 background-color: var(--red);
 	 opacity: 1;
  }
 
 .bar {
 	height: 24px;
 	width: 1px;
-	background-color: #EA0848;
+	background-color: var(--red);
 	opacity: 0;
 	margin-right: 10px;
 }

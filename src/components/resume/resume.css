@@ -5,7 +5,7 @@
 
 .subh {
 	font-size: 18px;
-  color: #EA0848;
+  color: var(--red);
 }
 
 .line {

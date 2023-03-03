@@ -3,6 +3,7 @@
 :root {
   --highlight: #eae6dc;
   --background: #181818;
+  --red: #EA0848
 }
 
 body { 
@@ -30,7 +31,7 @@ ol {
 }
 
 span {
-	color:#EA0848;
+	color: var(--red);
 }
 
 
