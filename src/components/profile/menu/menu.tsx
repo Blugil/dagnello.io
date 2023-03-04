@@ -21,7 +21,7 @@ const Menu = () => {
 					activeClassName="active">
 						<div className="item">
 							<div className="bar"></div>
-							Blog
+							Articles
 						</div>
 					</Link>
 				</li>	

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { Link, PageProps } from 'gatsby';
 import resume from '../../images/resume.pdf';
 import "./home.css";
 import BlogPostList from '../bloglist/bloglist';

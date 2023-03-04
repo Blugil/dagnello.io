@@ -1,12 +1,10 @@
 import * as React from "react"
-import { graphql } from "gatsby"
+import { graphql, PageProps } from "gatsby"
 import BlogPostList from '../components/bloglist/bloglist'
 import Layout from "../components/layout"
 
 
-const BlogPage: React.FC<any> = ({
-  data,
-}) => {
+const BlogPage: React.FC<PageProps> = ({ data }) => {
   return (
     <div>
       <Layout component={<BlogPostList data={data}/>} />
