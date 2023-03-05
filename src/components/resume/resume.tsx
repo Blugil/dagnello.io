@@ -2,7 +2,7 @@ import React from 'react';
 import './resume.css';
 
 
-const ResumeBuild: React.FC<any> = () => {
+const ResumeBuild = () => {
   
   return(
       <div>

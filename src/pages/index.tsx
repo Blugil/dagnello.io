@@ -1,11 +1,11 @@
 import * as React from "react"
-import { graphql } from "gatsby"
+import { graphql, PageProps } from "gatsby"
 import type { HeadFC } from "gatsby"
 import Layout from "../components/layout"
 import '../components/layout/layout.css'
 import Home from "../components/home/home"
 
-const IndexPage: React.FC<any> = ({data}) => {
+const IndexPage = ({ data }: PageProps) => {
   return (
     <main>
       <Layout component={ <Home data={data} /> } />

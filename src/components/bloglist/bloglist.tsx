@@ -1,8 +1,14 @@
-import { Link } from "gatsby";
+import { Link, PageProps } from "gatsby";
 import * as React from "react"
 import ArticlePreview from "./components/articleLink";
 
 import './bloglist.css';
+
+// remove any
+interface BlogProps {
+  data: any,
+  max?: number
+}
 
 const createArticleLinkListElement = (frontmatter: any) => {
   const {title, slug, date} = frontmatter;
@@ -14,7 +20,8 @@ const createArticleLinkListElement = (frontmatter: any) => {
   )
 }
 
-const BlogPostList: React.FC<any> = ({ data, max }) => {
+
+const BlogPostList = ({ data, max }: BlogProps) => {
   const { allMarkdownRemark } = data 
   const nodes = allMarkdownRemark.nodes;
   

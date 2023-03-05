@@ -5,7 +5,7 @@ function encode(data: any) {
   return Object.keys(data).map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])).join('&')
 }
 
-const ContactForm: React.FC<any> = () => {
+const ContactForm = () => {
   const [submit, setSubmit] = useState(true);
   const [state, setState] = useState({});
 

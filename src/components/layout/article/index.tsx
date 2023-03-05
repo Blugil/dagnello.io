@@ -2,7 +2,7 @@ import * as React from "react"
 import { Link, PageProps } from 'gatsby'
 import './articles.css'
 
-const BlogPostLayout: React.FC<any> = ({ data }) => {
+const BlogPostLayout = ({ data }: any) => {
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark
   return (
@@ -20,7 +20,6 @@ const BlogPostLayout: React.FC<any> = ({ data }) => {
           <div className="article-body"
             dangerouslySetInnerHTML={{ __html: html }}
           />
-
           <div className="small">
             <small>by <Link to="/"> Dominick Agnello </Link>| {frontmatter.date}</small>
           </div>

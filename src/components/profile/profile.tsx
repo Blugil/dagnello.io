@@ -7,8 +7,9 @@ import github from '../../images/github.png';
 import linkedin from '../../images/linkedin.png';
 
 
-const Profile: React.FC<any> = () => {
+const Profile = () => {
 	return(
+  
 		<div className="container profilecard">
       <img className="profileimage" alt="profile" src={blugil} />
       <h1>

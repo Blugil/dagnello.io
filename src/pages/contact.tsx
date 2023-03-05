@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import '../components/layout/layout.css'
 import ContactForm from "../components/contact/contact"
 
-const Contact: React.FC<void> = () => {
+const Contact = () => {
   return (
     <main>
       <Layout component={<ContactForm />} />

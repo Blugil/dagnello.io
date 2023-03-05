@@ -3,7 +3,8 @@ import * as React from 'react';
 
 import './articleLink.css';
 
-const ArticlePreview: React.FC<any> = (props) => {
+// replace any
+const ArticlePreview = (props: any) => {
   const {title, slug, date} = props.frontmatter;
   return(
     <li key={slug}>

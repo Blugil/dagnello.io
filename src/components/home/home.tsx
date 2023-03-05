@@ -4,8 +4,7 @@ import resume from '../../images/resume.pdf';
 import "./home.css";
 import BlogPostList from '../bloglist/bloglist';
 
-const Home: React.FC<any> = ({data}) => {
-
+const Home = ({ data }: any) => {
 	return(
 		<div id="home-container">
       <h1>Recent Articles</h1>

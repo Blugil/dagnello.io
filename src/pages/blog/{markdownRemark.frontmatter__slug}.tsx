@@ -2,9 +2,8 @@ import * as React from "react"
 import { graphql } from "gatsby"
 import BlogPostLayout from "../../components/layout/article"
 
-const BlogPostTemplate: React.FC<any> = ({
-  data,
-}) => {
+// replace any
+const BlogPostTemplate = ({ data }: any) => {
   return (
     <div>
       <div>

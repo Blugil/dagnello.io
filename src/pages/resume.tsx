@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import '../components/layout/layout.css'
 import ResumeBuild from "../components/resume/resume"
 
-const Resume: React.FC<void> = () => {
+const Resume = () => {
   return (
     <main>
       <Layout component={<ResumeBuild />} />
