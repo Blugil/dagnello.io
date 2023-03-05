@@ -6,9 +6,9 @@ import Layout from "../components/layout"
 
 const BlogPage: React.FC<PageProps> = ({ data }) => {
   return (
-    <div>
+    <main>
       <Layout component={<BlogPostList data={data}/>} />
-    </div>
+    </main>
   )
 }
 

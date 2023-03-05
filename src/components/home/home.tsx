@@ -17,10 +17,9 @@ const Home: React.FC<any> = ({data}) => {
 				<h1>Check out my Resume!</h1>
 				<small><Link to="/resume"><span>website link</span></Link> | <a href={resume} download><span>pdf download</span></a></small>
 				<p>
-					I've got quite a bit of experience in a few different fields such as: Backend Golang development 
-          for LaunchDarkly working on our Terraform integration, ReactJS front end development for Fisher PHX, a major design firm based in Arizona, and 
-					teaching experience with programming (C/C++/Scheme/Bash/Prolog). 
-          If you think my skills and I would be a good fit feel free to...
+					I have experience in backend development with TypeScript and Golang at a professional level working with for LaunchDarkly working on their Terraform integration, 
+          frontend development with React working at Fisher PHX, a branding and design firm based in Arizona, and 
+					teaching experience with programming (C/C++/Scheme/Bash/Prolog). If you think my skills and I would be a good fit feel free to...
 				</p>
 			</div>
 

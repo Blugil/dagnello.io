@@ -1,8 +1,16 @@
 #main-bloglist {
 	max-width: 1000px;
-  min-width: 900px;
+  min-width: 700px;
   border-radius: 10px;
 	color: var(--highlight);
   background-color: #282828;
   padding: 30px 20px 30px 20px;
+	box-sizing: border-box;
+}
+
+
+@media (max-width: 800px) {
+  #main-bloglist {
+    min-width: 0px;
+  }
 }

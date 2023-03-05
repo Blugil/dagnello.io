@@ -15,8 +15,8 @@ const Profile: React.FC<any> = () => {
         Dominick Agnello
       </h1>
       <p>I'm a Computer Science student at Arizona State 
-          University. Interested in web development, 
-          Rust, Linux, Neovim, and just general tinkering.
+          University. I've worked Full Stack Development and I'm 
+          currently interested in: Linux, open source, Rust, and web development.
       </p> 
       <ul className="list">
         <li> 
