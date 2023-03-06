@@ -1,8 +1,9 @@
 ---
-title: "My Solution to New Years Resolutions"
-slug: "/my-solution-to-new-years-resolutions"
-date: "2023 Jan 19"
+title: 'My Solution to New Years Resolutions'
+slug: '/my-solution-to-new-years-resolutions'
+date: '2023 Jan 19'
 ---
+
 # My Solution to New Year's Resolutions
 
 It's so weird; for some reason it seems like every calendar on earth just skipped the year 2022, which is crazy, right...? Ahem... Anyway, coming a bit late into the new year and including last year, I've started taking a new approach to "new year's resolutions" and how to go about them, and the truth is: goals are hard. They're really hard. And they're especially hard because if you mess up, it feels like failure. I've always been bad at keeping my resolutions going, but I think now I've got a good system going that I'd like to share.
