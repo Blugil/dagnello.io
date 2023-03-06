@@ -1,49 +1,43 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby Minimal TypeScript Starter
-</h1>
+# Personal Portfolio Website and Blog
 
-## 🚀 Quick start
+This is my personal website that I made to have a place to write down my thoughts and opinions as well as showcase my work.
+It has brief description of me on the home page, a list of all my blog posts, an html version of my resume, and a way to contact me.
 
-1.  **Create a Gatsby site.**
+## Technology
 
-    Use the Gatsby CLI to create a new site, specifying the minimal TypeScript starter.
+I utilized Gatsby and TypeScript for this website. I wanted the type safety of TypeScript (along with the practice) while also
+having an easy to use framework for static site generation and blog post hosting with markdown.
 
-    ```shell
-    # create a new Gatsby site using the minimal TypeScript starter
-    npm init gatsby -- -ts
-    ```
+## Thoughts
 
-2.  **Start developing.**
+TypeScript ensures that I know what I'm getting when I access data and what I need to put in when I give data which is a feature I *enjoy* about other languages.
+I'm a very big fan of type safety, but it's clear to me that with so many different possibilities that it's almost impossible to maintain complete type safety.
+However, avoiding the `any` keyword as much as possible has forced me to be much more specific with what I'm putting in as function parameters. 
 
-    Navigate into your new site’s directory and start it up.
+For example, I had a function signature look like this:
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+```js
+function something(myObj: any) {
+    const ({title, date, slug}) = myObj;
+    // logic
+}
+```
 
-3.  **Open the code and start customizing!**
+This satisfied my inexperienced brain as I had extrapolated that method from the example I saw, but I quickly realized this is exactly what TypeScript tries to avoid.
+Because the `object` parameter comes from a GraphQL query, I didn't know exactly what type the object would be or exactly what parameters it would have (at least with my current skill set).
+This lead me to adjusting how I was writing my functions (and components) by taking only the necessary data which resulted in this change:
 
-    Your site is now running at http://localhost:8000!
+```js
+function something(title: string, date: string, slug: string) {
+    // logic
+}
+```
 
-    Edit `src/pages/index.tsx` to see your site update in real-time!
+Doing it like this creates more easily readable, easy to understand, and&mdash;more importantly&mdash; easy for me to read 6 months from now when I do my annual refactor of my website...
 
-4.  **Learn more**
+## Conclusion
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-
-## 🚀 Quick start (Netlify)
-
-Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
-
-[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-minimal-ts)
+Switching from my previous website which used a script to generate JSX files that I then had to fill in manually with elements was incredibly cumbersome and while a fun novelty at first, 
+quickly became another barrier between my idea for a post and actually getting it on the internet. Gatsby is great and easy to work with and has an incredibly rich and easy to use plugin environment
+which let me spend more of my time thinking about structure than thinking about process. And I think this was a good first step into me using TypeScript with React. This website will continue
+to be improved and I hope it can serve as a great public entrypoint into me thoughts, opinions, projects, and anything else I can imagine. 
