@@ -1,15 +1,15 @@
 import React from 'react';
-import { Link, PageProps } from 'gatsby';
+import { Link, PageProps, graphql, useStaticQuery } from 'gatsby';
 import resume from '../../images/resume.pdf';
 import "./home.css";
-import BlogPostList from '../bloglist/bloglist';
+import BlogList from '../bloglist/bloglist';
 
-const Home = ({ data }: any) => {
+const Home = () => {
 	return(
 		<div id="home-container">
       <h1>Recent Articles</h1>
 			<div className="section">
-        <BlogPostList data={data} max={5} />
+        <BlogList max={5} />
 			</div>
 
 			<div className="section">

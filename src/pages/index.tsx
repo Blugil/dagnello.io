@@ -1,31 +1,16 @@
 import * as React from "react"
-import { graphql, PageProps } from "gatsby"
 import type { HeadFC } from "gatsby"
 import Layout from "../components/layout"
 import '../components/layout/layout.css'
 import Home from "../components/home/home"
 
-const IndexPage = ({ data }: PageProps) => {
+const IndexPage = () => {
   return (
     <main>
-      <Layout component={ <Home data={data} /> } />
+      <Layout component={ <Home /> } />
     </main>
   )
 }
-
-export const postQuery = graphql`
-  query {
-    allMarkdownRemark {
-       nodes{
-        frontmatter {
-          title
-          slug
-          date
-        }
-      }
-    }
-  }
-`
 
 export default IndexPage
 

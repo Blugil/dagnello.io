@@ -1,10 +1,9 @@
 import * as React from "react"
-import { Link, PageProps } from 'gatsby'
+import { Link } from 'gatsby'
 import './articles.css'
 
-const BlogPostLayout = ({ data }: any) => {
-  const { markdownRemark } = data // data.markdownRemark holds your post data
-  const { frontmatter, html } = markdownRemark
+const BlogPostLayout = ({ frontmatter, html }: BlogPostTemplateType) => {
+  
   return (
     <div className="layout">
       <div className="article-container">

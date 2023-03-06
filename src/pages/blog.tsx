@@ -1,30 +1,15 @@
 import * as React from "react"
-import { graphql, PageProps } from "gatsby"
-import BlogPostList from '../components/bloglist/bloglist'
+import BlogList from '../components/bloglist/bloglist'
 import Layout from "../components/layout"
 
 
-const BlogPage = ({ data }: any) => {
+const BlogPage = () => {
   return (
     <main>
-      <Layout component={<BlogPostList data={data}/>} />
+      <Layout component={<BlogList />} />
     </main>
   )
 }
-
-export const postQuery = graphql`
-  query {
-    allMarkdownRemark {
-       nodes{
-        frontmatter {
-          title
-          slug
-          date
-        }
-      }
-    }
-  }
-`
 
 export default BlogPage;
 

@@ -3,7 +3,6 @@ import * as React from 'react';
 
 import './articleLink.css';
 
-// replace any
 const ArticlePreview = (props: any) => {
   const {title, slug, date} = props.frontmatter;
   return(

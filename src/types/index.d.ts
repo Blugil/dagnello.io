@@ -6,3 +6,8 @@ declare interface PostMetadata {
   slug: string,
   date: string
 }
+
+declare interface BlogPostTemplateType {
+  frontmatter: MarkdownRemarkFontmater,
+  html: any
+}

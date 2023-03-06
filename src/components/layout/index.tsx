@@ -2,7 +2,6 @@ import React from 'react';
 import Profile from '../profile/profile';
 
 const Blog = ({ component }: any) => {
-  console.log(component);
   return(
     <div className='main'>
       <div id='profile'>

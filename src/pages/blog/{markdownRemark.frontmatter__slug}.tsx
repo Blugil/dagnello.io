@@ -1,13 +1,17 @@
 import * as React from "react"
-import { graphql } from "gatsby"
+import { graphql, PageProps } from "gatsby"
 import BlogPostLayout from "../../components/layout/article"
 
 // replace any
-const BlogPostTemplate = ({ data }: any) => {
+const BlogPostTemplate = ({ data }: PageProps<Queries.Query>) => {
+
+  const { markdownRemark } = data
+  const { frontmatter, html } = markdownRemark!
+  
   return (
     <div>
       <div>
-        <BlogPostLayout data={data} />   
+        <BlogPostLayout frontmatter={frontmatter} html={html} />   
       </div>
     </div>
   )

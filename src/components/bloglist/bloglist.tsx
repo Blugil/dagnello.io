@@ -1,17 +1,14 @@
-import { Link, PageProps } from "gatsby";
+import { graphql, Link, PageProps, useStaticQuery } from "gatsby";
 import * as React from "react"
-import ArticlePreview from "./components/articleLink";
+//import ArticlePreview from "./components/articleLink";
 
 import './bloglist.css';
 
-// remove any
 interface BlogProps {
-  data: any,
   max?: number
 }
 
-const createArticleLinkListElement = (frontmatter: any) => {
-  const {title, slug, date} = frontmatter;
+const createArticleLinkListElement = (title: string, slug: string, date: string) => {
   const linkDestination = "/blog" + slug;
   return (
     <li key={slug}>
@@ -21,16 +18,31 @@ const createArticleLinkListElement = (frontmatter: any) => {
 }
 
 
-const BlogPostList = ({ data, max }: BlogProps) => {
+const BlogList = ({ max }: BlogProps) => {
+  const data = useStaticQuery<Queries.Query>(graphql`
+      query {
+        allMarkdownRemark {
+           nodes{
+            frontmatter {
+              title
+              slug
+              date
+            }
+          }
+        }
+      }
+    `
+  )
   const { allMarkdownRemark } = data 
-  const nodes = allMarkdownRemark.nodes;
+  const { nodes } = allMarkdownRemark;
   
-  let articleList: any[] = [];
+  let articleList: JSX.Element[] = [];
   
   if (max) {
     const amount = max > nodes.length ? nodes.length : max;
     for (let i = 0; i < amount; i++) {
-      articleList.push(createArticleLinkListElement(nodes[i].frontmatter))
+      const { title, slug, date } = nodes[i].frontmatter!;
+      articleList.push(createArticleLinkListElement(title!, slug!, date!))
     }
     return (
       <div>
@@ -42,7 +54,7 @@ const BlogPostList = ({ data, max }: BlogProps) => {
   }
 
   // no max == full blog page
-  let years: { [key: string] : any[]; } = {};
+  let years: { [key: string] : JSX.Element[]; } = {};
 
   // generates the dictionary of blog posts keyed under a year
   nodes.forEach((post: any) => {
@@ -50,12 +62,12 @@ const BlogPostList = ({ data, max }: BlogProps) => {
     const year = date.split(' ')[0];
 
     if (!years.hasOwnProperty(year)) {
-      years[year] = [createArticleLinkListElement(post.frontmatter)];
-      //years[year] = [<ArticlePreview frontmatter={post.frontmatter} />];
+      const { title, slug, date } = post.frontmatter!;
+      years[year] = [createArticleLinkListElement(title!, slug!, date!)];
     }
     else {
-      years[year].push(createArticleLinkListElement(post.frontmatter));
-      //years[year].push(<ArticlePreview frontmatter={post.frontmatter} />);
+      const { title, slug, date } = post.frontmatter!;
+      years[year].push(createArticleLinkListElement(title!, slug!, date!))
     }
   })
 
@@ -78,4 +90,4 @@ const BlogPostList = ({ data, max }: BlogProps) => {
   )
 }
 
-export default BlogPostList;
+export default BlogList;
