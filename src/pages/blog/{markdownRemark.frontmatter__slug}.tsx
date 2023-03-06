@@ -1,24 +1,23 @@
-import * as React from "react"
-import { graphql, PageProps } from "gatsby"
-import BlogPostLayout from "../../layout/article"
+import * as React from 'react';
+import { graphql, PageProps } from 'gatsby';
+import BlogPostLayout from '../../layout/article';
 
 // replace any
-const BlogPostTemplate = ({ data }: PageProps<Queries.Query>) => {
+function BlogPostTemplate({ data }: PageProps<Queries.Query>) {
+  const { markdownRemark } = data;
+  const { frontmatter, html } = markdownRemark!;
 
-  const { markdownRemark } = data
-  const { frontmatter, html } = markdownRemark!
-  
   return (
     <div>
       <div>
-        <BlogPostLayout frontmatter={frontmatter} html={html} />   
+        <BlogPostLayout frontmatter={frontmatter} html={html} />
       </div>
     </div>
-  )
+  );
 }
 
 export const pageQuery = graphql`
-  query($id: String!) {
+  query ($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
@@ -27,6 +26,6 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
 
 export default BlogPostTemplate;
