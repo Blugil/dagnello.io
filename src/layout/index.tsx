@@ -1,5 +1,5 @@
 import React from 'react';
-import Profile from '../profile/profile';
+import Profile from '../components/profile/profile'
 
 const Blog = ({ component }: any) => {
   return(

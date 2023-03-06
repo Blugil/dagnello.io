@@ -1,6 +1,6 @@
 import * as React from "react"
 import { graphql, PageProps } from "gatsby"
-import BlogPostLayout from "../../components/layout/article"
+import BlogPostLayout from "../../layout/article"
 
 // replace any
 const BlogPostTemplate = ({ data }: PageProps<Queries.Query>) => {

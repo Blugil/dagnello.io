@@ -1,6 +1,6 @@
 import * as React from "react"
 import BlogList from '../components/bloglist/bloglist'
-import Layout from "../components/layout"
+import Layout from "../layout"
 
 
 const BlogPage = () => {
