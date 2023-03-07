@@ -2,7 +2,10 @@ import type { GatsbyConfig } from 'gatsby'
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `dagnello`,
+    title: `Dominick Agnello`,
+    author: '@Blugil',
+    description: 'A personal website to showcase my articles and projects along with a way to contact me',
+    keywords: 'blugil, dominick agnello, programming, Linux, Rust, TypeScript, blog, growth',
     siteUrl: `https://dagnello.io`,
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.

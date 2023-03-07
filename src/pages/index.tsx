@@ -1,8 +1,8 @@
 import * as React from 'react';
-import type { HeadFC } from 'gatsby';
 import Layout from '../layout';
 import '../layout/layout.css';
 import Home from '../components/home/home';
+import { SEO } from '../components/seo';
 
 function IndexPage() {
   return (
@@ -14,4 +14,6 @@ function IndexPage() {
 
 export default IndexPage;
 
-export const Head: HeadFC = () => <title>Home Page</title>;
+export const Head = () => {
+  <SEO title="Home | dagnello" />
+}

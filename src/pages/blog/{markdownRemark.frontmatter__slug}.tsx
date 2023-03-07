@@ -1,11 +1,12 @@
 import * as React from 'react';
-import { graphql, PageProps } from 'gatsby';
+import { graphql, HeadProps, PageProps } from 'gatsby';
 import BlogPostLayout from '../../layout/article';
+import { SEO } from '../../components/seo';
 
-// replace any
 function BlogPostTemplate({ data }: PageProps<Queries.Query>) {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark!;
+
 
   return (
     <div>
@@ -29,3 +30,7 @@ export const pageQuery = graphql`
 `;
 
 export default BlogPostTemplate;
+
+export const Head = (props: HeadProps<Queries.Query>) => {
+  <SEO title={props.data.markdownRemark?.frontmatter?.title} />
+}
