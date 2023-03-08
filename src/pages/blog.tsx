@@ -1,3 +1,4 @@
+import { HeadFC } from 'gatsby';
 import * as React from 'react';
 import BlogList from '../components/bloglist/bloglist';
 import { SEO } from '../components/seo';
@@ -13,6 +14,8 @@ function BlogPage() {
 
 export default BlogPage;
 
-export const Head = () => {
-  <SEO title="Blog | dagnello" />
+export const Head: HeadFC = () => {
+  return(
+    <SEO title="Blog | dagnello" />
+  )
 }

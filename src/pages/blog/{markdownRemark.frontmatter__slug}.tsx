@@ -22,6 +22,7 @@ export const pageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
+        title
         date
         slug
       }
@@ -32,5 +33,7 @@ export const pageQuery = graphql`
 export default BlogPostTemplate;
 
 export const Head = (props: HeadProps<Queries.Query>) => {
-  <SEO title={props.data.markdownRemark?.frontmatter?.title} />
+  return(
+    <SEO title={props.data.markdownRemark?.frontmatter?.title} />
+  )
 }
