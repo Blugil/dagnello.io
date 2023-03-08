@@ -3,6 +3,7 @@ import Layout from '../layout';
 import '../layout/layout.css';
 import ResumeBuild from '../components/resume/resume';
 import { SEO } from '../components/seo';
+import { HeadFC } from 'gatsby';
 
 function Resume() {
   return (
@@ -14,6 +15,8 @@ function Resume() {
 
 export default Resume;
 
-export const Head = () => {
-  <SEO title="Resume | dagnello" />
+export const Head: HeadFC = () => {
+  return(
+    <SEO title="Resume | dagnello" />
+  )
 }

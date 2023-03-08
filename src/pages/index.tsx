@@ -3,6 +3,7 @@ import Layout from '../layout';
 import '../layout/layout.css';
 import Home from '../components/home/home';
 import { SEO } from '../components/seo';
+import { HeadFC } from 'gatsby';
 
 function IndexPage() {
   return (
@@ -14,6 +15,8 @@ function IndexPage() {
 
 export default IndexPage;
 
-export const Head = () => {
-  <SEO title="Home | dagnello" />
+export const Head: HeadFC = () => {
+  return(
+    <SEO />
+  )
 }

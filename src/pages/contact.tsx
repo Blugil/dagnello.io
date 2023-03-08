@@ -3,6 +3,7 @@ import Layout from '../layout';
 import '../layout/layout.css';
 import ContactForm from '../components/contact/contact';
 import { SEO } from '../components/seo';
+import { HeadFC } from 'gatsby';
 
 function Contact() {
   return (
@@ -14,6 +15,8 @@ function Contact() {
 
 export default Contact;
 
-export const Head = () => {
-  <SEO title="Contact | dagnello" />
+export const Head: HeadFC = () => {
+  return(
+    <SEO title="Contact | dagnello" />
+  )
 }
