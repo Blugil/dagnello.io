@@ -1,8 +1,8 @@
 import * as React from 'react';
-import type { HeadFC } from 'gatsby';
 import Layout from '../layout';
 import '../layout/layout.css';
 import ResumeBuild from '../components/resume/resume';
+import { SEO } from '../components/seo';
 
 function Resume() {
   return (
@@ -14,4 +14,6 @@ function Resume() {
 
 export default Resume;
 
-export const Head: HeadFC = () => <title>Resume</title>;
+export const Head = () => {
+  <SEO title="Resume | dagnello" />
+}
