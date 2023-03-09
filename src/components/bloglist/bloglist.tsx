@@ -18,8 +18,7 @@ const createArticleLinkListElement = (
     <li key={slug}>
       <Link to={linkDestination}>
         {' '}
-        {date} &mdash;
-        <span>{title}</span>{' '}
+        {date} &mdash; <span>{title}</span>{' '}
       </Link>
     </li>
   );

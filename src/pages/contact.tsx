@@ -16,7 +16,5 @@ function Contact() {
 export default Contact;
 
 export const Head: HeadFC = () => {
-  return(
-    <SEO title="Contact | dagnello" />
-  )
-}
+  return <SEO title="Contact | dagnello" />;
+};
