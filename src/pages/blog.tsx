@@ -15,5 +15,7 @@ function BlogPage() {
 export default BlogPage;
 
 export const Head: HeadFC = () => {
-  return <SEO title="Blog | dagnello" />;
-};
+  return(
+    <SEO title="Blog | dagnello" />
+  )
+}

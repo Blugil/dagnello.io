@@ -32,5 +32,7 @@ export const pageQuery = graphql`
 export default BlogPostTemplate;
 
 export const Head = (props: HeadProps<Queries.Query>) => {
-  return <SEO title={props.data.markdownRemark?.frontmatter?.title} />;
-};
+  return(
+    <SEO title={props.data.markdownRemark?.frontmatter?.title} />
+  )
+}
