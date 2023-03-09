@@ -7,7 +7,6 @@ function BlogPostTemplate({ data }: PageProps<Queries.Query>) {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark!;
 
-
   return (
     <div>
       <div>
