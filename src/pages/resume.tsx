@@ -16,7 +16,5 @@ function Resume() {
 export default Resume;
 
 export const Head: HeadFC = () => {
-  return(
-    <SEO title="Resume | dagnello" />
-  )
-}
+  return <SEO title="Resume | dagnello" />;
+};
