@@ -19,6 +19,7 @@ const createArticleLinkListElement = (
       <Link to={linkDestination}>
         {' '}
         {date} &mdash;
+        {' '}
         <span>{title}</span>{' '}
       </Link>
     </li>
