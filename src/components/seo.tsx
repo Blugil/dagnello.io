@@ -1,13 +1,14 @@
-import React from "react"
-import { useSiteMetadata } from "../hooks/use-site-metadata"
+import React from 'react';
+import { useSiteMetadata } from '../hooks/use-site-metadata';
 
 export const SEO = ({ title, description, children }: any) => {
-  const { title: defaultTitle, description: defaultDescription} = useSiteMetadata()
+  const { title: defaultTitle, description: defaultDescription } =
+    useSiteMetadata();
 
   const seo = {
     title: title || defaultTitle,
     description: description || defaultDescription,
-  }
+  };
 
   return (
     <>
@@ -18,5 +19,5 @@ export const SEO = ({ title, description, children }: any) => {
       <meta name="twitter:description" content={seo.description} />
       {children}
     </>
-  )
-}
+  );
+};
