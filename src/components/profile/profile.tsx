@@ -12,9 +12,8 @@ function Profile() {
       <img className="profileimage" alt="profile" src={blugil} />
       <h1>Dominick Agnello</h1>
       <p>
-        I'm a Computer Science student at Arizona State University. I've worked
-        Full Stack Development and I'm currently interested in: Linux, open
-        source, Rust, and web development.
+        I'm a graduated Computer Science major who's worked doing full stack development at <a href="https://launchdarkly.com/"><span>LaunchDarkly</span></a> and <a href="https://www.atpco.net/"><span>ATPCO</span></a>. I'm currently interested in: Linux, open
+        source, Rust, and graphics programming.
       </p>
       <ul className="list">
         <li>
