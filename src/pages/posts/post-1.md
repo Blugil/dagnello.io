@@ -1,5 +1,5 @@
 ---
-title: 'Revaming My Website and Making a Blog'
+title: 'Revamping My Website and Making a Blog'
 slug: '/revamping-my-website-and-making-a-blog'
 date: '2021 Nov 21'
 ---
