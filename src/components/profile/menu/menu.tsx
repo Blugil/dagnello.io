@@ -24,14 +24,6 @@ function Menu() {
           </Link>
         </li>
         <li className="navitem">
-          <Link to="/resume" activeClassName="active">
-            <div className="item">
-              <div className="bar" />
-              Resume
-            </div>
-          </Link>
-        </li>
-        <li className="navitem">
           <Link to="/contact" activeClassName="active">
             <div className="item">
               <div className="bar" />

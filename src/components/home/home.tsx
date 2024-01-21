@@ -15,10 +15,6 @@ function Home() {
       <div className="section">
         <h1>Check out my Resume!</h1>
         <small>
-          <Link to="/resume">
-            <span>website link</span>
-          </Link>{' '}
-          |{' '}
           <a href={resume} download>
             <span>pdf download</span>
           </a>
